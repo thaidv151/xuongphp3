@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->integer('quantity');
-            $table->decimal('price', 10, 2);
+            $table->integer('price');
             $table->timestamps();
         });
     }
